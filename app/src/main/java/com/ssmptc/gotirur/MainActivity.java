@@ -1,4 +1,4 @@
-package com.ssmptc.onlinegift;
+package com.ssmptc.gotirur;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        WebView wv=(WebView)findViewById(R.id.wv);
+        WebView wv= findViewById(R.id.wv);
         wv.getSettings().setJavaScriptEnabled(true);
         wv.setFocusable(true);
         wv.setFocusableInTouchMode(true);

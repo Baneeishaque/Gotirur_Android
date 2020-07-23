@@ -1,4 +1,4 @@
-package com.ssmptc.onlinegift;
+package com.ssmptc.gotirur;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class SetIp extends Activity {
 	Button button_save;
-	EditText edittext_ip;
+	EditText edit_text_ip;
 	public static String ip;
 
 	@Override
@@ -19,16 +19,16 @@ public class SetIp extends Activity {
 		setContentView(R.layout.set_ip);
 		setTitle("Server Configuration");
 
-		button_save = (Button) findViewById(R.id.buttonlike);
-		edittext_ip = (EditText) findViewById(R.id.editText1);
-		edittext_ip.setText("192.168.43.40");
+		button_save = findViewById(R.id.buttonlike);
+		edit_text_ip = (EditText) findViewById(R.id.editText1);
+		edit_text_ip.setText(R.string.ip);
 
 		button_save.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				ip = edittext_ip.getText().toString();
+				ip = edit_text_ip.getText().toString();
 
 				if (ip.equalsIgnoreCase("")) {
 					Toast.makeText(getApplicationContext(), "Enter IP address", Toast.LENGTH_SHORT).show();
